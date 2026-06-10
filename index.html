@@ -26,9 +26,29 @@
 <div id="game" style="display:none;">
     <h2>Level 1</h2>
     <p> Find it!</p>
+    <div id="gameArea" style="position: relative; display: inline-block;">
     <img id="background" src="enviroment/room1.webp" alt="Background" style="width: 800px;">
+    <img id="cat" src="cats/cat1.png" alt="Cat" style="position: absolute; width: 80px; top: 70%; left: 15%;">
+    </div>
 </div>
+<script>
+    const startBtn = document.getElementById('startBtn');
+    const startDiv = document.getElementById('start');
+    const gameDiv = document.getElementById('game');
+    const cat = document.getElementById('cat');
 
+    startBtn.addEventListener('click', function() {
+        startDiv.style.display = 'none';
+        gameDiv.style.display = 'block';
+    });
+
+    cat.addEventListener('click', function() {
+    cat.style.display = 'none';
+    
+    });
+
+
+</script>
 
 
 
@@ -36,17 +56,6 @@
 
 
 </body>
-<script>
-    const startBtn = document.getElementById('startBtn');
-    const startDiv = document.getElementById('start');
-    const gameDiv = document.getElementById('game');
 
-    startBtn.addEventListener('click', function() {
-        startDiv.style.display = 'none';
-        gameDiv.style.display = 'block';
-    });
-
-
-</script>
 
 </html>
