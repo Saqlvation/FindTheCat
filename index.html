@@ -22,7 +22,6 @@
 <button id="startBtn">Start Game</button>
 </div>
 
-
 <div id="game" style="display:none;">
     <h2>placeholder 67</h2>
     <p>placeholder</p>
@@ -30,7 +29,17 @@
     <img id="background" src="enviroment/room1.webp" alt="Background" style="width: 800px;">
     <img id="cat" src="cats/cat1.png" alt="Cat" style="position: absolute;">
     </div>
-</div>
+    </div>
+    <div id="winScreen" style="display:none; text-align: center;">
+        <h2>You Found ALL of the cats!</h2>
+        <p> I hope you enjoyed finding them and looking at my project </p>
+  <div id="featuredCats">
+        <img src="cats/cat1.png" style="width:100px;">
+        <img src="cats/cat2.png" style="width:100px;">
+        <img src="cats/cat3.png" style="width:100px;">
+        <img src="cats/cat4.png" style="width:100px;">
+        <img src="cats/cat5.png" style="width:100px;">
+    </div>   
 <script>
 
 // instead of writing every single level into the html we store it into a structured area
@@ -110,6 +119,7 @@
     ]
     let currentLevel = 0; // the current level (index in the levels array)
     const sound = new Audio();
+    const winMusic = new Audio('sounds/meowWin.mp3'); // the audio we will play when the player clicks finish
     // we create a function called loadlevel with a index parameter to load the level
     function loadLevel(index) {
         const level = levels[index];
@@ -134,6 +144,7 @@
         const startDiv = document.getElementById('start');
         const gameDiv = document.getElementById('game');
         const cat = document.getElementById('cat');
+        const winScreen = document.getElementById('winScreen');
 
     startBtn.addEventListener('click', function() {
         startDiv.style.display = 'none'; // we hide the start screen
@@ -142,21 +153,29 @@
     });
 
     cat.addEventListener('click', function() {
+        cat.style.display = 'none'; // we hide the cat bye
+
+
         sound.currentTime = 0; // we reset the click sound
         sound.play(); // play the gorgerous click sound 
-        sound.onended = function() { // best thing ever, basically ONLYY when the sound stops it keeps going to the next level
-        currentLevel++; // we increase the current level by 1
 
+        sound.onended = function() { // when the sound finishes playing we check if we need to load the next level or show the win screen
+            currentLevel++; // we increase the current level by 1
+            
 
-    if(currentLevel >= levels.length) { // if the level u are in is over the actual amount of levels or equel it means u won so we show you
-        // TODO REMOVE THIS POPUP ITS UGLY.
-        alert('oh my gosh you did it !! you won! wow...'); // just an alert, the annoying pop up..
+    if(currentLevel >= levels.length ) { // 
+        gameDiv.style.display = 'none'; // we hide the game screen
+        winScreen.style.display = 'block'; // we show the win screen
+        winMusic.play(); // we play the win music
         return;
     }
 
+    
     loadLevel(currentLevel); // we load the next level
-}
+};
     });
+
+
 
 
 </script>
