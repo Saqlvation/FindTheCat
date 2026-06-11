@@ -24,27 +24,95 @@
 
 
 <div id="game" style="display:none;">
-    <h2>Level 1</h2>
-    <p> Find it!</p>
+    <h2>placeholder 67</h2>
+    <p>placeholder</p>
     <div id="gameArea" style="position: relative; display: inline-block;">
     <img id="background" src="enviroment/room1.webp" alt="Background" style="width: 800px;">
-    <img id="cat" src="cats/cat1.png" alt="Cat" style="position: absolute; width: 80px; top: 70%; left: 15%;">
+    <img id="cat" src="cats/cat1.png" alt="Cat" style="position: absolute; width: 20px;">
     </div>
 </div>
 <script>
+
+// instead of writing every single level into the html we store it into a structured area
+    const levels = [
+        {
+            title: 'Level 1',
+            text: 'Find the cat in this room its pretty easy :)',
+            image: 'enviroment/room1.webp',
+            cat: {
+                src: 'cats/cat1.png',
+                style: {
+                    top: '70%',
+                    left: '15%',
+                }
+        }
+        },
+        {
+            title: 'Level 2',
+            text: 'Find the cat here i bet u freaking cant...',
+            image: 'enviroment/room2.webp',
+            cat: {
+                src: 'cats/cat2.png',
+                style: {
+                    top: '50%',
+                    left: '60%',
+                }
+            }
+        },
+        {
+            title: 'level 3',
+            text: 'ok you passed level 2.. but u will NEVER pass this one. i think.. D:',
+            image: 'enviroment/room3.webp',
+            cat: {
+                src: 'cats/cat3.png',
+                style: {
+                    top: '30%',
+                    left: '40%',
+                }
+            }
+        }
+    
+    ]
+    let currentLevel = 0; // the current level (index in the levels array)
+
+    // we create a function called loadlevel with a index parameter to load the level
+    function loadLevel(index) {
+        const level = levels[index];
+
+        const background = document.getElementById('background');
+        const cat = document.getElementById('cat');
+        const levelTitle = document.querySelector('#game h2');
+        const levelText = document.querySelector('#game p');
+
+        
+        levelTitle.textContent = level.title; 
+        levelText.textContent = level.text; // we set the level text to the current level text or a default message
+        background.src = level.image;
+        cat.src = level.cat.src;
+        cat.style.display = 'block'; // we make sure the cat is visible
+        cat.style.top = level.cat.style.top; // we set the cat postion to the levels cat position
+        cat.style.left = level.cat.style.left; // same but left value
+    }
     const startBtn = document.getElementById('startBtn');
     const startDiv = document.getElementById('start');
     const gameDiv = document.getElementById('game');
     const cat = document.getElementById('cat');
 
     startBtn.addEventListener('click', function() {
-        startDiv.style.display = 'none';
-        gameDiv.style.display = 'block';
+        startDiv.style.display = 'none'; // we hide the start screen
+        gameDiv.style.display = 'block'; // we show the game screen
+        loadLevel(currentLevel); // calls the loadlevel function to load the level 
     });
 
     cat.addEventListener('click', function() {
-    cat.style.display = 'none';
-    
+    currentLevel++; // we increase the current level by 1
+
+    if(currentLevel >= levels.length) {
+        alert('oh my gosh you did it !! you won! wow...'); // just an alert, the annoying pop up..
+        return;
+    }
+
+    loadLevel(currentLevel); // we load the next level
     });
 
 
