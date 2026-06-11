@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find The Cat(meow)</title>
+    <link rel="icon" type="image/png" href="cats/cat4.png"> <!-- we add a cat to the browser tab icon -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Courier New", Courier, monospace;
             text-align: center;
             margin-top: 50px;
             background-color: #81a146;
+        }
+
+        p {
+            font-size: 28px;
+            color: rgb(0, 1, 2);
+        }
+
+        button {
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover { /* when our  mouse hovers on the buttons it turns the button green, text red and shrinks it a little*/
+            padding: 8px;
+            background-color: #00ec08;
+            color: rgb(197, 51, 51);
+        }
+
+        #cat:hover {
+            cursor: pointer;
+            transform: scale(1.1); /* we make the cat grow a little */
         }
        </style>
 
@@ -39,6 +62,9 @@
         <img src="cats/cat3.png" style="width:100px;">
         <img src="cats/cat4.png" style="width:100px;">
         <img src="cats/cat5.png" style="width:100px;">
+        <br>
+        <p> here's your reward </p>
+        <img src="cats/catDance.gif">
     </div>   
 <script>
 
