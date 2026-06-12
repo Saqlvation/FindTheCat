@@ -132,3 +132,13 @@
 };
     });
 
+    const mute = document.getElementById('mute');
+    let isMute = false;
+
+    mute.addEventListener('click', function() {
+        isMute = !isMute;
+        sound.muted = isMute;
+        winMusic.muted = isMute;
+        mute.textContent = isMute ? '🔊unmute' : '🔇mute';
+    });
+

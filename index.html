@@ -7,10 +7,16 @@
     <link rel="icon" type="image/png" href="cats/cat4.png"> <!-- we add a cat to the browser tab icon -->
     <style>
         body {
-            font-family: "Courier New", Courier, monospace;
+            font-family: "Segoe UI", system-ui,  sans-serif;
             text-align: center;
-            margin-top: 50px;
-            background-color: #81a146;
+            background-color: #c6ccbd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0; /* to remove the margin since it can cause a scrooling wheel to appear */
+            
         }
 
         p {
@@ -19,15 +25,18 @@
         }
 
         button {
-            padding: 10px;
+            padding: 10px 24px;
             font-size: 18px;
             cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.1s, background-color 0.1s;
         }
 
         button:hover { /* when our  mouse hovers on the buttons it turns the button green, text red and shrinks it a little*/
-            padding: 8px;
+            transform: scale(0.96); /* makes it slightly smaller */
             background-color: #00ec08;
-            color: rgb(197, 51, 51);
+            color: rgb(255, 255, 255);
         }
 
         #cat:hover {
@@ -67,6 +76,7 @@
         <img src="cats/catDance.gif">
     </div>  
 </div> 
+    <button id="mute" style="position: fixed; top:12px; right: 12px;">🔇</button>
     <script src="script.js"></script> <!-- we link the js file to the html -->
 
 
