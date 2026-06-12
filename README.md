@@ -2,7 +2,7 @@
 Find The Cat is a simple little game in your browser, when you enter it you will see a simple play button you need to click. When you click it you will need to find all of the cats in the images, there are 5 levels total (Web Based)
 
 example picture:
-![example](examples/example1.png)
+![example](examples/example.png)
 
 
 ### How does it work?
@@ -17,7 +17,7 @@ We have 3 main area we have to cover here:
 
 3 The win condition and the way we advance levels
     the whole game progresses by listening for user inputs we check by using event listeners
-![example1](examples/example.png)
+![example1](examples/example2.png)
 The site starts and the start btn waits for a click once clicked it hides everything and displays the game screen
 The level fully loads(background sound level, cat, position)
 then if the cat gets clicked a sound starts playing and once the sound is done it loads the next level.
