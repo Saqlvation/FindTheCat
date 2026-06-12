@@ -17,7 +17,7 @@ We have 3 main area we have to cover here:
 
 3 The win condition and the way we advance levels
     the whole game progresses by listening for user inputs we check by using event listeners
-![example](examples/example2.png)
+![example1](examples/example2.png)
 The site starts and the start btn waits for a click once clicked it hides everything and displays the game screen
 The level fully loads(background sound level, cat, position)
 then if the cat gets clicked a sound starts playing and once the sound is done it loads the next level.
