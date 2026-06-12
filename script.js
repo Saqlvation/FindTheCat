@@ -70,7 +70,36 @@
                     width: '40px',
                 }
             }
-        }
+        },
+        {
+            title: 'level 6',
+            text: 'find that cat!!',
+            image: 'enviroment/room6.webp',
+            sound: 'sounds/meow1.mp3',
+            cat: {
+                src: 'cats/cat7.png',
+                style: {
+                    top: '90%',
+                    left: '10%',
+                    width: '50px',
+                }
+            }
+        },
+        {
+            title: 'level 7',
+            text: 'you will never finish this game! ',
+            image: 'enviroment/room7.webp',
+            sound: 'sounds/meow3.mp3',
+            cat: {
+                src: 'cats/cat8.png',
+                style: {
+                    top: '28%',
+                    left: '20%',
+                    width: '60px',
+                }
+            }
+        },
+
         
     
     ]
