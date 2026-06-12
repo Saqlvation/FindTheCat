@@ -1,5 +1,5 @@
 # FindTheCat
-Find The Cat is a simple little game in your browser, when you enter it you will see a simple play button you need to click. When you click it you will need to find all of the cats in the images, there are 5 levels total (Web Based)
+Find The Cat is a simple little game in your browser, when you enter it you will see a simple play button you need to click. When you click it you will need to find all of the cats in the images, there are 7 levels total (Web Based)
 
 example picture:
 ![example](examples/example.png)
@@ -35,6 +35,7 @@ You can either download the whole project from here (zip and extract) or go try 
 - Win screen
 - Start Screen
 - custom meows and win music
+- button to disable and enable sounds
 ### What did i learn from this ?
 I learned a couple of very important things while building this little web game:
 - i learned how to separate data from logic by making a level array 
@@ -49,6 +50,8 @@ I learned a couple of very important things while building this little web game:
 
 - some CSS styling additions
     i learned what "transform" does ( basically multiplies the size of the object by the amount you want example; "transform: scale(2.0))
+
+- how to disable sounds completely 
 
 ### Conclusion
 I hope you enjoyed this little project ! have a wonderful rest of your day
