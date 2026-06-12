@@ -8,14 +8,14 @@ example picture:
 ### How does it work?
 We have 3 main area we have to cover here:
 
-- how does the cat hide?
+1 how does the cat hide?
     the levels are wrapped in a container box which is set to be relative and that keeps our background image, the cat on the other hand is absolute and it is layered on top of it. we move it manually
     the cat is (#cat) while the box that keeps the levels is (#gameArea)
 
-- The level System 
+2 The level System 
     instead of doing everything in HTML i decided to take the JS approach we use a sort of "blueprint" that contains the title of the level, the custom text image and sound we will use and also the css elements of the cats
 
-- The win condition and the way we advance levels
+3 The win condition and the way we advance levels
     the whole game progresses by listening for user inputs we check by using event listeners
 ![example](examples/example2.png)
 The site starts and the start btn waits for a click once clicked it hides everything and displays the game screen
@@ -38,11 +38,7 @@ You can either download the whole project from here (zip and extract) or go try 
 ### What did i learn from this ?
 I learned a couple of very important things while building this little web game:
 - i learned how to separate data from logic by making a level array 
-    const array = [
-        {
-            
-        }
-    ];
+    `const array = [{ }];`
     which is very important as we dont have to hardcode everything in our HTML, also if i need to add any new levels it will be very easy and i dont even need to touch the HTML part.
 
 - Handling of audio
