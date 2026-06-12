@@ -49,3 +49,9 @@ I learned a couple of very important things while building this little web game:
 
 - some CSS styling additions
     i learned what "transform" does ( basically multiplies the size of the object by the amount you want example; "transform: scale(2.0))
+
+### Conclusion
+I hope you enjoyed this little project ! have a wonderful rest of your day
+![cat](cats/cat4.png)
+
+
